@@ -31,3 +31,10 @@ $ cp .env.example .env
 ```
 
 set your environment variables in the `.env` file. like `openai_api_key` value.
+
+```bash 
+$ uvicorn main:app --reload --host 0.0.0.0 --port 5000
+```
+## POSTMAN collection
+
+Download POSTMAN collection from [/assets/mini-rag-app.postman_collection.json]
