@@ -17,3 +17,17 @@ $ conda create -n mini-rag python=3.8
 ```bash
 $ conda activate mini-rag
 ```
+
+## Installation
+
+```bash
+$ pip install reqirements.txt
+```
+
+### setup the environment variables
+
+```bash
+$ cp .env.example .env
+```
+
+set your environment variables in the `.env` file. like `openai_api_key` value.
