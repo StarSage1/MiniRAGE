@@ -1,0 +1,204 @@
+#include<stdio.h>
+
+//ex:1 1=sunday, 2=monday, 3=tuesday, 4=wednesday, 5=thursday, 6=firday, 7=saturday
+
+//int main()
+//{
+//	int x;
+//	printf("enter a number");
+//	scanf("%d", &x);
+//	switch (x)
+//	{
+//	case 1:
+//	{
+//		printf("sunday");
+//		break;
+//	}
+//	case 2:
+//	{
+//		printf("monday");
+//		break;
+//	}
+//	case 3:
+//	{
+//		printf("tuesday");
+//		break;
+//	}
+//	case 4:
+//	{
+//		printf("wednesday");
+//		break;
+//	}
+//	case 5:
+//	{
+//		printf("thursday");
+//		break;
+//	}
+//	case 6:
+//	{
+//		printf("friday");
+//		break;
+//	}
+//	case 7:
+//	{
+//		printf("saturday");
+//		break;
+//	}
+//	default:
+//	{
+//		printf("wrong number");
+//	}
+//	}
+//}
+
+//sheet 3
+//Q9 using switch
+
+//int main() {
+//    int schooling;
+//    printf("Enter number of years of schooling: ");
+//    scanf("%d", &schooling);
+//
+//    switch (schooling) {
+//    case 0:
+//        printf("Educational level: None\n");
+//        break;
+//    case 1:
+//    case 2:
+//    case 3:
+//    case 4:
+//    case 5:
+//        printf("Educational level: Elementary School\n");
+//        break;
+//    case 6:
+//    case 7:
+//    case 8:
+//        printf("Educational level: Middle School\n");
+//        break;
+//    case 9:
+//    case 10:
+//    case 11:
+//    case 12:
+//        printf("Educational level: High School\n");
+//        break;
+//    case 13:
+//    case 14:
+//    case 15:
+//    case 16:
+//    case 17:
+//    case 18:
+//        printf("Educational level: College\n");
+//        break;
+//    default:
+//        printf("Bad data\n");
+//        break;
+//    }
+//}
+
+// Q10 
+//What is the value of y after the following switch statement is executed ?
+//int x = 3; 
+//switch (x + 3) {   so here will be switch(6) as x+3 is 3+3 so is 6
+//case 6: y = 1;  in this case it will be true and the value of y will be 1
+//default: y += 1;   the above case had no break so the execution will fall into the default case and will increment the value of y
+//}                      making the value of y =2 as it was 1 and increment it with 1 so it will be 2
+
+//Q11
+
+//int main()
+//{
+//	int a,x;
+//	printf("enter a number");
+//	scanf("%d", &a);
+//    switch (a) {
+//    case 1:
+//        x += 5;
+//        break;
+//    case 2:
+//        x += 10;
+//        break;
+//    case 3:
+//        x += 16;
+//        break;
+//    case 4:
+//        x += 34;
+//        break;
+//        // optional: handle other values of `a`
+//    default:
+//        // do nothing or handle invalid input
+//        break;
+//    }
+//}
+
+//sheet3 homework switch problems
+
+//Q5
+
+//int main() {
+//    char grade;
+//
+//    // Ask user for grade input
+//    printf("Enter the grade (A-F or a-f): ");
+//    scanf("%c", &grade);
+//
+//    // Convert the grade to uppercase (if it's lowercase) manually
+//    if (grade >= 'a' && grade <= 'z') {
+//        grade = grade - 'a' + 'A';  // Convert lowercase to uppercase
+//    }
+//
+//    // Switch statement to handle the different grades
+//    switch (grade) {
+//    case 'A':
+//        printf("Transcript Message: Excellent\n");
+//        break;
+//    case 'B':
+//        printf("Transcript Message: Very good\n");
+//        break;
+//    case 'C':
+//        printf("Transcript Message: Good\n");
+//        break;
+//    case 'D':
+//        printf("Transcript Message: Poor\n");
+//        break;
+//    case 'F':
+//        printf("Transcript Message: Failed\n");
+//        break;
+//    default:
+//        printf("Transcript Message: Invalid\n");
+//        break;
+//    }
+//}
+
+//Q7)B
+
+//#include <math.h>  // for sqrt()
+//
+//int main() {
+//    double a, b, c, Disc, x1, x2;
+//
+//    // Read the coefficients of the quadratic equation
+//    printf("Enter the values of a, b, and c: ");
+//    scanf("%lf %lf %lf", &a, &b, &c);
+//
+//    // Calculate the discriminant
+//    Disc = b * b - 4 * a * c;
+//
+//    // Use switch statement to check discriminant
+//    switch ((Disc > 0) - (Disc < 0)) {  // This will evaluate to 1, 0, or -1
+//    case 1:  // Disc > 0
+//        x1 = (-b + sqrt(Disc)) / (2 * a);
+//        x2 = (-b - sqrt(Disc)) / (2 * a);
+//        printf("The roots are different: X1 = %.2lf, X2 = %.2lf\n", x1, x2);
+//        break;
+//    case 0:  // Disc == 0
+//        x1 = x2 = -b / (2 * a);
+//        printf("The roots are equal: X1 = X2 = %.2lf\n", x1);
+//        break;
+//    case -1:  // Disc < 0
+//        printf("The roots are imaginary.\n");
+//        break;
+//    default:
+//        printf("Unexpected error.\n");
+//        break;
+//    }
+//}

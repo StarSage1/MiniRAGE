@@ -1,0 +1,409 @@
+//sheet3 
+#include<stdio.h>
+
+//Q3
+
+//int main()
+//{
+//	int number;
+//	printf("please enter a number");
+//	scanf("%d", &number);
+//	if (number % 2 == 0)
+//	{
+//		printf("number is even");
+//	}
+//	else
+//	{
+//		printf("number is odd");
+//	}
+//}
+
+
+//Q5
+
+//int main()
+//{
+//	char x;
+//	float area;
+//	printf("enter S or T");
+//	scanf("%c", &x);
+//	if (x == 'S' || x == 's')
+//	{
+//		int side;
+//		printf("enter side of the square");
+//		scanf("%d", &side);
+//		area = side * side;
+//	}
+//	else if (x == 'T' || x == 't')
+//	{
+//		int base, height;
+//		printf("enter base and height of the triangle");
+//		scanf("%d%d", &base, &height);
+//		area = 0.5 * base * height;
+//
+//	}
+//	printf("area= %f", area);
+//}
+
+//Q6
+
+//int main()
+//{
+//	float sales, comission, total_salary;
+//	int salary = 5000;
+//	printf("please enter sales");
+//	scanf("%f", &sales);
+//	if (sales <= 5000)
+//	{
+//		comission = salary * 0.08;
+//	}
+//	else if (sales <= 10000)
+//	{
+//		comission = salary * 0.1;
+//	}
+//	else
+//	{
+//		comission = salary * 0.12;
+//	}
+//	total_salary = salary + comission;
+//	printf("total_salary=%f", total_salary);
+//}
+
+//Q7
+
+//int main()
+//{
+//    float x, y;
+//
+//    printf("Enter x and y coordinates: ");
+//    scanf("%f %f", &x, &y);
+//
+//    if (x == 0 && y == 0) {
+//        printf("(%.1f, %.1f) is at the origin", x, y);
+//    }
+//    else if (x == 0) {
+//        printf("(%.1f, %.1f) is on the y axis", x, y);
+//    }
+//    else if (y == 0) {
+//        printf("(%.1f, %.1f) is on the x axis", x, y);
+//    }
+//    else if (x > 0 && y > 0) {
+//        printf("(%.1f, %.1f) is in quadrant 1", x, y);
+//    }
+//    else if (x < 0 && y > 0) {
+//        printf("(%.1f, %.1f) is in quadrant 2", x, y);
+//    }
+//    else if (x < 0 && y < 0) {
+//        printf("(%.1f, %.1f) is in quadrant 3", x, y);
+//    }
+//    else if (x > 0 && y < 0) {
+//        printf("(%.1f, %.1f) is in quadrant 4", x, y);
+//    }
+//}
+
+//Q8
+
+//int main()
+//{
+//    float gpa;
+//
+//    // Input GPA
+//    printf("Enter your GPA (0.0 - 4.0): ");
+//    scanf("%f", &gpa);
+//
+//    // Validate GPA range
+//    if (gpa < 0.0 || gpa > 4.0) {
+//        printf("Invalid GPA input. Please enter a GPA between 0.0 and 4.0.\n");
+//    }
+//    else {
+//        // Nested if statements based on GPA range
+//        if (gpa < 1.0) {
+//            printf("Failed semester—registration suspended\n");
+//        }
+//        else {
+//            if (gpa < 2.0) {
+//                printf("On probation for next semester\n");
+//            }
+//            else {
+//                if (gpa < 3.0) {
+//                    // No message
+//                }
+//                else {
+//                    if (gpa < 3.5) {
+//                        printf("Dean’s list for semester\n");
+//                    }
+//                    else {
+//                        printf("Highest honors for semester\n");
+//                    }
+//                }
+//            }
+//        }
+//    }
+//}
+
+//sheet3 homework
+
+//Q2
+
+//int main()
+//{
+//    char ch;
+//
+//    // Prompt user to enter a character
+//    printf("Enter a character: ");
+//    scanf(" %c", &ch);  // Note the space before %c to consume any leftover newline
+//
+//    // Check character type
+//    if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) {
+//        printf("'%c' is a letter.\n", ch);
+//    }
+//    else if (ch >= '0' && ch <= '9') {
+//        printf("'%c' is a digit.\n", ch);
+//    }
+//    else {
+//        printf("'%c' is a symbol.\n", ch);
+//    }
+//}
+
+//Q3
+
+//int main()
+//{
+//    char unit;
+//    float distance, converted;
+//
+//    printf("Enter the unit of the distance (K for kilometers, M for miles): ");
+//    scanf(" %c", &unit);
+//
+//    if (unit == 'K' || unit=='k') {
+//        // Convert from kilometers to miles
+//        printf("Enter distance in kilometers: ");
+//        scanf("%f", &distance);
+//        converted = distance / 1.609344;
+//        printf("%.2f kilometers is equal to %.2f miles\n", distance, converted);
+//    }
+//    else if (unit == 'M' ||unit=='m') {
+//        // Convert from miles to kilometers
+//        printf("Enter distance in miles: ");
+//        scanf("%f", &distance);
+//        converted = distance * 1.609344;
+//        printf("%.2f miles is equal to %.2f kilometers\n", distance, converted);
+//    }
+//    else {
+//        // Invalid input
+//        printf("Invalid unit entered. Please enter 'K' or 'M'.\n");
+//    }
+//}
+
+//Q4
+
+//int main()
+//{
+//    float weight, height, bmi;
+//
+//    // Input weight and height
+//    printf("Enter your weight in kilograms: ");
+//    scanf("%f", &weight);
+//
+//    printf("Enter your height in meters: ");
+//    scanf("%f", &height);
+//
+//    // Validate height to avoid division by zero
+//    if (height <= 0) {
+//        printf("Invalid height. Height must be greater than 0.\n");
+//        return 1;
+//    }
+//
+//    // Calculate BMI
+//    bmi = weight / (height * height);
+//
+//    // Display BMI
+//    printf("Your BMI is: %.2f\n", bmi);
+//
+//    // Determine BMI category
+//    if (bmi < 18.5) {
+//        printf("Weight Status: Underweight\n");
+//    }
+//    else if (bmi < 25.0) {
+//        printf("Weight Status: Normal\n");
+//    }
+//    else if (bmi < 30.0) {
+//        printf("Weight Status: Overweight\n");
+//    }
+//    else {
+//        printf("Weight Status: Obese\n");
+//    }
+//
+//}
+
+//Q7a
+
+//#include<math.h>
+//int main()
+//{
+//    float a, b, c;
+//    float discriminant, x1, x2;
+//
+//    // Input coefficients
+//    printf("Enter coefficients a, b and c: ");
+//    scanf("%f %f %f", &a, &b, &c);
+//
+//    // Check if it's a quadratic equation
+//    if (a == 0) {
+//        printf("This is not a quadratic equation.\n");
+//        return 1;
+//    }
+//
+//    // Calculate discriminant
+//    discriminant = b * b - 4 * a * c;
+//
+//    // Check and compute based on discriminant
+//    if (discriminant > 0) {
+//        x1 = (-b + sqrt(discriminant)) / (2 * a);
+//        x2 = (-b - sqrt(discriminant)) / (2 * a);
+//        printf("The roots are different: X1 = %.2f, X2 = %.2f\n", x1, x2);
+//    }
+//    else if (discriminant == 0) {
+//        x1 = x2 = -b / (2 * a);
+//        printf("The roots are equal: X1 = X2 = %.2f\n", x1);
+//    }
+//    else {
+//        printf("The roots are imaginary.\n");
+//    }
+//}
+
+//Q8
+
+//int main()
+//{
+//    int num1, num2, result;
+//    char op;
+//
+//    // Header
+//    printf("*** Calculator Problem ***\n");
+//
+//    // Input numbers
+//    printf("Enter two numbers: ");
+//    scanf("%d %d", &num1, &num2);
+//
+//    // Input operator
+//    printf("Enter one operator: ");
+//    scanf(" %c", &op);  // space before %c to consume any leftover newline
+//
+//    // Perform operation
+//    switch (op) {
+//    case '+':
+//        result = num1 + num2;
+//        printf("%d + %d = %d\n", num1, num2, result);
+//        break;
+//    case '-':
+//        result = num1 - num2;
+//        printf("%d - %d = %d\n", num1, num2, result);
+//        break;
+//    case '*':
+//        result = num1 * num2;
+//        printf("%d * %d = %d\n", num1, num2, result);
+//        break;
+//    case '/':
+//        if (num2 == 0) {
+//            printf("Error: Division by zero is not allowed.\n");
+//        }
+//        else {
+//            result = num1 / num2;
+//            printf("%d / %d = %d\n", num1, num2, result);
+//        }
+//        break;
+//    default:
+//        printf("Wrong operator\n");
+//    }
+//}
+
+//Q9
+
+//int main()
+//{
+//    float grossSales, earnings;
+//    char choice;
+//
+//    // First iteration
+//    printf("Enter gross sales for the salesperson: $");
+//    scanf("%f", &grossSales);
+//
+//    // Calculate earnings
+//    if (grossSales >= 0) {
+//        earnings = 200 + (0.09 * grossSales);
+//        printf("The salesperson's earnings are: $%.2f\n", earnings);
+//    }
+//
+//    // Ask for another
+//    printf("Do you want to enter another salesperson's data? (Y/N): ");
+//    scanf(" %c", &choice);
+//
+//    // Second iteration (manual repeat using if again)
+//    if (choice == 'Y' || choice == 'y') {
+//        printf("Enter gross sales for the salesperson: $");
+//        scanf("%f", &grossSales);
+//
+//        if (grossSales >= 0) {
+//            earnings = 200 + (0.09 * grossSales);
+//            printf("The salesperson's earnings are: $%.2f\n", earnings);
+//        }
+//
+//        printf("Do you want to enter another salesperson's data? (Y/N): ");
+//        scanf(" %c", &choice);
+//    }
+//
+//    // Third iteration (optional – add more manually if needed)
+//    if (choice == 'Y' || choice == 'y') {
+//        printf("Enter gross sales for the salesperson: $");
+//        scanf("%f", &grossSales);
+//
+//        if (grossSales >= 0) {
+//            earnings = 200 + (0.09 * grossSales);
+//            printf("The salesperson's earnings are: $%.2f\n", earnings);
+//        }
+//
+//        printf("No more manual repetitions coded.\n");
+//    }
+//}
+
+//Q11
+
+//int main()
+//{
+//    int accountNumber;
+//    float beginningBalance, charges, credits, creditLimit, newBalance;
+//
+//    // Input account details
+//    printf("Enter account number: ");
+//    scanf("%d", &accountNumber);
+//
+//    printf("Enter beginning balance: $");
+//    scanf("%f", &beginningBalance);
+//
+//    printf("Enter total charges: $");
+//    scanf("%f", &charges);
+//
+//    printf("Enter total credits: $");
+//    scanf("%f", &credits);
+//
+//    printf("Enter credit limit: $");
+//    scanf("%f", &creditLimit);
+//
+//    // Calculate new balance
+//    newBalance = beginningBalance + charges - credits;
+//
+//    // Check if new balance exceeds credit limit
+//    if (newBalance > creditLimit) {
+//        printf("\nAccount Number: %d\n", accountNumber);
+//        printf("Credit Limit: $%.2f\n", creditLimit);
+//        printf("New Balance: $%.2f\n", newBalance);
+//        printf("Credit limit exceeded\n");
+//    }
+//    else {
+//        printf("\nAccount Number: %d\n", accountNumber);
+//        printf("Credit Limit: $%.2f\n", creditLimit);
+//        printf("New Balance: $%.2f\n", newBalance);
+//        printf("Credit limit not exceeded\n");
+//    }
+//}
